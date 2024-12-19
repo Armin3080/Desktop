@@ -3,9 +3,9 @@
 echo Downloading XMrig...
 bitsadmin /transfer mydownloadjob /download /priority high https://github.com/xmrig/xmrig/releases/download/v6.22.2/xmrig-6.22.2-msvc-win64.zip "%cd%\xmrig.zip"
 
-:: استخراج فایل ZIP
+:: استخراج فایل ZIP با استفاده از 7zip
 echo Extracting XMrig...
-powershell -Command "Expand-Archive -Path xmrig.zip -DestinationPath xmrig"
+"C:\Program Files\7-Zip\7z.exe" x xmrig.zip -o.
 
 :: وارد پوشه XMrig
 cd xmrig-6.22.2
