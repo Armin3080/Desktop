@@ -1,7 +1,9 @@
 @echo off
-:: دانلود و استخراج XMrig
+:: دانلود XMrig
 curl -L -o xmrig-6.15.1-win64.zip https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-win64.zip
-powershell -command "Expand-Archive -Path xmrig-6.15.1-win64.zip -DestinationPath ."
+
+:: استخراج فایل ZIP با استفاده از 7zip
+"C:\Program Files\7-Zip\7z.exe" x xmrig-6.15.1-win64.zip -o.
 
 :: وارد دایرکتوری XMrig
 cd xmrig-6.15.1
